@@ -57,6 +57,9 @@ class Testmap extends Component {
     });
 
     map.on("load", function() {
+      window.alert(
+        "Simple Map Test. Click event to view details, Double click map location to create a new event on the location."
+      );
       loadEvents();
     });
 
