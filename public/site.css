@@ -66,7 +66,7 @@
 
     }
 
-    .boxleft {
+    .filterbox {
         border-left: 1px solid rgb(26, 26, 27);
         border-top: 1px solid rgb(26, 26, 27);
         border-bottom: 1px solid rgb(26, 26, 27);
@@ -76,9 +76,8 @@
 
     }
 
-    .box {
+    .outermapbox {
         border: 1px solid rgb(26, 26, 27);
-
         padding: 1px;
         width: 85%;
         height: auto;
@@ -127,21 +126,22 @@
         width: inherit;
     }
 
-    .boxleft {
+    .filterbox {
         border-top: 1px solid rgb(4, 116, 32);
         border-left: 1px solid rgb(4, 116, 32);
         border-right: 1px solid rgb(4, 116, 32);
         padding: 5px;
         width: 100%;
         height: 300px;
+        order: 2;
     }
 
-    .box {
+    .outermapbox {
         border: 1px solid rgb(3, 58, 37);
 
         padding: 5px;
         height: 600px;
-
+        order: 1;
     }
 
 
