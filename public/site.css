@@ -49,26 +49,31 @@
         height: 700px;
         flex-wrap: wrap;
         max-width: 99%;
+
     }
 
     #map-container {
         position: relative;
         height: 100%;
         width: 100%;
+
     }
 
     #map {
         position: relative;
         height: inherit;
         width: inherit;
+
     }
 
     .boxleft {
-        border: 1px solid rgb(26, 26, 27);
-
+        border-left: 1px solid rgb(26, 26, 27);
+        border-top: 1px solid rgb(26, 26, 27);
+        border-bottom: 1px solid rgb(26, 26, 27);
         padding: 1px;
         width: 15%;
         height: auto;
+
     }
 
     .box {
@@ -77,6 +82,7 @@
         padding: 1px;
         width: 85%;
         height: auto;
+
     }
 
     img {
@@ -122,8 +128,9 @@
     }
 
     .boxleft {
-        border: 1px solid rgb(4, 116, 32);
-
+        border-top: 1px solid rgb(4, 116, 32);
+        border-left: 1px solid rgb(4, 116, 32);
+        border-right: 1px solid rgb(4, 116, 32);
         padding: 5px;
         width: 100%;
         height: 300px;
