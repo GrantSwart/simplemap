@@ -18,3 +18,135 @@
     left: 0;
     bottom: 0;
 }
+
+
+#testimage {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #000;
+}
+
+/*MEDIA LARGE DEVICES */
+@media only screen and (min-width: 1200px) {
+
+    .container {
+        margin: 10px;
+        padding: 10px;
+        max-width: 98% !important;
+    }
+
+}
+
+@media only screen and (min-width: 700px) {
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        padding: 10px;
+        border: 1px solid #000;
+        margin-left: 5%;
+        margin-right: 5%;
+        height: 700px;
+        flex-wrap: wrap;
+        max-width: 99%;
+    }
+
+    #map-container {
+        position: relative;
+        height: 100%;
+        width: 100%;
+    }
+
+    #map {
+        position: relative;
+        height: inherit;
+        width: inherit;
+    }
+
+    .boxleft {
+        border: 1px solid rgb(26, 26, 27);
+
+        padding: 1px;
+        width: 15 %;
+        height: auto;
+    }
+
+    .box {
+        border: 1px solid rgb(26, 26, 27);
+
+        padding: 1px;
+        width: 85%;
+        height: auto;
+    }
+
+    img {
+
+        /* Set up proportionate scaling */
+        max-width: 100%;
+        height: auto;
+
+        /*     object-fit: cover; */
+    }
+
+
+
+
+}
+
+/* END MEDIA QUERY */
+
+
+/* SMALL DEVICES*/
+@media screen and (max-width: 700px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border: 1px solid #000;
+        margin-left: 5%;
+        margin-right: 5%;
+        height: 700px;
+    }
+
+    #map-container {
+        position: relative;
+        height: 100%;
+        width: 100%;
+    }
+
+    #map {
+        position: relative;
+        height: inherit;
+        width: inherit;
+    }
+
+    .boxleft {
+        border: 1px solid rgb(4, 116, 32);
+
+        padding: 5px;
+        width: 100%;
+        height: 300px;
+    }
+
+    .box {
+        border: 1px solid rgb(3, 58, 37);
+
+        padding: 5px;
+        height: 600px;
+
+    }
+
+
+    img {
+
+        /* Set up proportionate scaling */
+        max-width: 100%;
+        height: auto;
+
+        /*     object-fit: cover; */
+    }
+
+
+
+    /* END MEDIA QUERY */
