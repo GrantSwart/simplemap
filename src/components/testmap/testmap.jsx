@@ -13,26 +13,7 @@ class Testmap extends Component {
 
   componentDidMount() {
     //GLOBAL DATA
-    const el = [
-      {
-        id: "1",
-        title: "Food Festival",
-        description: "Yum yum",
-        date: "29/11/2019",
-        location: "Covent Garden",
-        lng: -0.1225,
-        lat: 51.5116
-      },
-      {
-        id: "2",
-        title: "Winter Swim",
-        description: "It will be cold!",
-        date: "25/12/2019",
-        location: "Hyde Park Lido",
-        lng: -0.1691,
-        lat: 51.5046
-      }
-    ];
+    const el = [];
 
     //Model for new events
     function newevent(eid, title, long, lat, description, date, location) {
@@ -138,6 +119,8 @@ class Testmap extends Component {
       for (var i = 0; i < eventsObject.eventsArray.length; i++) {
         console.log(eventsObject.eventsArray[i].id);
         addToMap(eventsObject.eventsArray[i]);
+        //add to local array
+        el.push(eventsObject.eventsArray[i]);
       }
       /*
       for (const [index] of el.entries()) {

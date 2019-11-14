@@ -16,6 +16,15 @@
       "location": "Hyde Park Lido",
       "lng": -0.1691,
       "lat": 51.5046
+    },
+    {
+      "id": "3",
+      "title": "Painters show",
+      "description": "Paintings on display",
+      "date": "25/11/2019",
+      "location": "Southbank",
+      "lng": -0.1115,
+      "lat": 51.5072
     }
   ]
 }
