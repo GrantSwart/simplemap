@@ -60,7 +60,12 @@ class Testmap extends Component {
       window.alert(
         "Simple Map Test. Click event to view details, Double click map location to create a new event on the location."
       );
-      loadEvents();
+
+      let eventsObject = require("../data/data.json");
+      //console.log(eventsObject);
+      //console.log(eventsObject.eventsArray[0].id);
+
+      loadEvents(eventsObject);
     });
 
     map.on("click", function(e) {
@@ -128,13 +133,19 @@ class Testmap extends Component {
       return null;
     } //End function
 
-    function loadEvents() {
+    function loadEvents(eventsObject) {
       //LOOP ARRAY DATA AND ADD TO MAP
+      for (var i = 0; i < eventsObject.eventsArray.length; i++) {
+        console.log(eventsObject.eventsArray[i].id);
+        addToMap(eventsObject.eventsArray[i]);
+      }
+      /*
       for (const [index] of el.entries()) {
         //items.push(<li key={index}>{value}</li>);
         // console.log(elements[index]);
         addToMap(el[index]);
       }
+  */
     }
 
     //DOUBLE CLICK OPEN MODAL COMPONENT

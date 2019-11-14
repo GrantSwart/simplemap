@@ -1,35 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>Mapbox GL JS and React</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js"></script>
+    <link
+      href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <link href="site.css" rel="stylesheet" />
+  </head>
 
-<head>
-  <title>Mapbox GL JS and React</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js'></script>
-  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='stylesheet' />
-  <link href="site.css" rel="stylesheet" />
-
-</head>
-
-<body>
-
-  <div class="container">
-
-    <div class="filterbox" id="bottomleft">
-      Filter Box
-    </div>
-    <div class="outermapbox" id="middle">
-
-      <div id="map-container">
-        <div id="map"></div>
-        <div id="modal"></div>
+  <body>
+    <div class="container">
+      <div class="filterbox" id="bottomleft">
+        <div class="filterarea">Filter options will show in here</div>
+        <div class="eventlistarea">Filtered events will be listed here</div>
+      </div>
+      <div class="outermapbox" id="middle">
+        <div id="map-container">
+          <div id="map"></div>
+          <div id="modal"></div>
+        </div>
       </div>
     </div>
-
-  </div>
-
-
-
-</body>
-
+  </body>
 </html>
