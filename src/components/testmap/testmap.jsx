@@ -95,20 +95,20 @@ class Testmap extends Component {
       var precision = 0.001;
       for (const [i] of el.entries()) {
         if (Math.abs(lng - el[i].lng) <= precision) {
-          console.log(el[i].id + ": " + lng + el[i].lng + " lng EQUAL");
+          //  console.log(el[i].id + ": " + lng + el[i].lng + " lng EQUAL");
 
           if (Math.abs(lat - el[i].lat) <= precision) {
-            console.log(el[i].id + ": " + lat + el[i].lat + " lat EQUAL");
+            //  console.log(el[i].id + ": " + lat + el[i].lat + " lat EQUAL");
             console.log("Match - return id=layer");
             return el[i];
           } else {
-            console.log(
-              el[i].id + ": " + lat + el[i].lat + " lat DO NOT EQUAL"
-            );
+            //   console.log(el[i].id + ": " + lat + el[i].lat + " lat DO NOT EQUAL" );
+            console.log("No Match ");
+
             return null;
           }
         } else {
-          console.log(el[i].id + ": " + lng + el[i].lng + " lng DO NOT EQUAL");
+          // console.log(el[i].id + ": " + lng + el[i].lng + " lng DO NOT EQUAL");
         }
       } //end for
       return null;
@@ -117,11 +117,19 @@ class Testmap extends Component {
     function loadEvents(eventsObject) {
       //LOOP ARRAY DATA AND ADD TO MAP
       for (var i = 0; i < eventsObject.eventsArray.length; i++) {
-        console.log(eventsObject.eventsArray[i].id);
+        //console.log(eventsObject.eventsArray[i].id);
         addToMap(eventsObject.eventsArray[i]);
         //add to local array
         el.push(eventsObject.eventsArray[i]);
       }
+
+      //get array and store in JSON format
+      var myObject = { eventsArray: el };
+      const jsonTest = JSON.stringify(myObject);
+      console.log("129 serialised object:\n" + jsonTest);
+
+      let test = JSON.parse(jsonTest);
+      console.log(test.eventsArray[0].id);
       /*
       for (const [index] of el.entries()) {
         //items.push(<li key={index}>{value}</li>);
@@ -176,7 +184,7 @@ class Testmap extends Component {
           shortDate,
           eLocation
         );
-        console.log(newEvent);
+        // console.log(newEvent);
         //add to array
         el.push(newEvent);
         //add event to map
@@ -184,7 +192,7 @@ class Testmap extends Component {
 
         //check in array
         for (const [index] of el.entries()) {
-          console.log(el[index]);
+          console.log(el[index].id);
         }
 
         //Reset form values
@@ -201,7 +209,7 @@ class Testmap extends Component {
     });
 
     function addToMap(element) {
-      console.log(element.lng + "," + element.lat);
+      // console.log(element.lng + "," + element.lat);
 
       map.loadImage(myImage, function(error, image) {
         if (error) throw error;
